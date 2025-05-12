@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import "tailwindcss";
 
+body {
+  font-family: "Press Start 2P", cursive;
+}
+
 @layer base {
   * {
     @apply m-0 p-0 box-border;
   }
 
   body {
-    @apply bg-yellow-200 font-press text-center;
+    @apply bg-yellow-200 text-center;
   }
 }
