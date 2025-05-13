@@ -50,7 +50,21 @@ export const Pokemon = () => {
 			{pokemon && (
 				<main className="flex flex-col items-center ">
 					<h1 className="text-3xl mt-13 mb-5">{pokemon?.name} Details</h1>
-					<img src={pokemon.sprites.front_default} alt={pokemon.name} />
+					<img
+						src={pokemon.sprites.front_default}
+						alt={pokemon.name}
+						onError={(e) => {
+							const target = e.currentTarget;
+							if (!target.dataset.retried) {
+								target.dataset.retried = "true";
+								target.src =
+									pokemon.sprites.front_default ||
+									"https://via.placeholder.com/96?text=No+Image";
+							} else {
+								target.src = "https://via.placeholder.com/96?text=No+Image";
+							}
+						}}
+					/>
 					<p>Height: {pokemon.height}</p>
 					<p>Weight: {pokemon.weight}</p>
 					<p>
