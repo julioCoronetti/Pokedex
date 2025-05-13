@@ -6,7 +6,11 @@ export const PokemonCard = ({ name, sprites }: PokemonProps) => {
 		<Link to={`/pokemon?name=${name}`}>
 			<div className="bg-amber-50 rounded-lg p-4 flex flex-col items-center shadow-xl">
 				<h2>{name}</h2>
-				<img src={sprites.front_default} alt={name} />
+				{sprites?.front_default ? (
+					<img src={sprites.front_default} alt={name} />
+				) : (
+					<p>No image available</p>
+				)}
 			</div>
 		</Link>
 	);
