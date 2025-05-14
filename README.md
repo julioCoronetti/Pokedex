@@ -33,4 +33,4 @@
 
 ## ⚖ License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/julioCoronetti/ToDo-List/edit/main/LICENSE) file for more information.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/julioCoronetti/Pokedex/edit/main/LICENSE) file for more information.
